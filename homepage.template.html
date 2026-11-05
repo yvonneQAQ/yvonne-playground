@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The playground of Yifeng Yvonne Yuan: music, sound, multimedia, poetry, and performance.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Yifeng Yvonne Yuan's Playground">
+  <meta property="og:description" content="Music, sound, multimedia, poetry, and performance.">
+  <meta property="og:image" content="https://yvonne-yuan-playground.yvonneyuanyf.chatgpt.site/assets/performance.jpg">
+  <title>Home | YvonneYuanMusic</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="${name}'s Playground home">
+        <span>${title}</span>
+        <span>${subtitle}</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar">
+        <nav id="site-nav" aria-label="Main navigation">
+          <ul class="main-nav">
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="${about_url}">About</a></li>
+            <li>
+              <a href="${works_url}">Works</a>
+              <ul class="work-nav">
+                <li><a href="${works_url}">Contemporary Music</a></li>
+                <li><a href="${works_url}">Multimedia</a></li>
+                <li><a href="${works_url}">Dance and Film</a></li>
+                <li><a href="${poetry_url}">Poetry</a></li>
+              </ul>
+            </li>
+            <li class="nav-events"><a href="#events">Event</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main">
+        <section class="hero" aria-label="Live sound performance">
+          <img class="performance-image" src="/assets/performance.jpg" width="1600" height="1101" alt="Yifeng Yvonne Yuan performing with sound objects and live electronics outdoors." fetchpriority="high">
+        </section>
+        <section class="events" id="events" aria-labelledby="events-title">
+          <h1 id="events-title">Events</h1>
+          <div class="event-list">${events_html}</div>
+        </section>
+        <footer id="contact">
+          <p>Email <a href="mailto:${email}">${email}</a> for scores and collaboration</p>
+          <div class="social-links" aria-label="Listen and follow">
+            <a href="${bandcamp_url}">Bandcamp</a>
+            <a href="${soundcloud_url}">SoundCloud</a>
+            <a href="${instagram_url}">Instagram</a>
+          </div>
+          <p class="copyright">${copyright}</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script src="/site.js" defer></script>
+</body>
+</html>
