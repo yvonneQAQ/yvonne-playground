@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": "contemporary-music",
+      "title": "Contemporary Music",
+      "items": [
+        {"title": "We are too tired, like two sinking suns.", "description": "For two cellos and live electronics", "year": "2026", "path": "/sinkingsuns/"},
+        {"title": "I wrote you a letter. (a letter is what I wrote to you.)", "description": "For two pianos and a typewriter — commissioned by House on Fire", "year": "2025", "path": "/i-wrote-you-a-letter/"},
+        {"title": "The World is My Shelter", "description": "For solo classical guitar and fixed electronics", "year": "2025", "path": "/theworldismyshelter/"},
+        {"title": "∞10000 Waves∞", "description": "For 28 performers", "year": "2024", "path": "/10000waves/"},
+        {"title": "We all inevitably fall into the abyss", "description": "For ensemble", "year": "2024", "path": "/we-all-inevitably-fall-into-the-abyss/"},
+        {"title": "I Saw a Butterfly Nestled in a Bell", "description": "An acousmatic work", "year": "2024", "path": "/butterflybell/"},
+        {"title": "In the Center of A Shadow Lies the Brightest Spot", "description": "For Riot Ensemble", "year": "2023"},
+        {"title": "High Tide, Low Tide", "description": "For string orchestra and percussion", "year": "2022", "path": "/high-tide-low-tide/"},
+        {"title": "Di-Da-Doo-Dum", "description": "For fixed media and solo voice", "year": "2022", "path": "/didadoodum/"},
+        {"title": "Human Anatomy", "description": "For Pierrot ensemble", "year": "2021", "path": "/human-anatomy/"},
+        {"title": "Ephemeral Bloom", "description": "For symphony orchestra", "year": "2021", "path": "/ephemeral-bloom/"},
+        {"title": "Shattered Moon", "description": "For trumpet and electronics", "year": "2020", "path": "/shatteredmoon/"},
+        {"title": "Three Poems of Tanikawa Shuntaro", "description": "For soprano and piano", "year": "2020"},
+        {"title": "The Shape of Flowers", "description": "For violin and piano", "year": "2020"},
+        {"title": "Three Wavery Images", "description": "For Pierrot ensemble", "year": "2018"}
+      ]
+    },
+    {
+      "id": "multimedia",
+      "title": "Multimedia Works",
+      "items": [
+        {"title": "Field Poetry", "description": "An environment-responsive sound box", "year": "2025", "path": "/fieldpoetry/"},
+        {"title": "Grain of Language / (The Typist)", "description": "", "year": "2025", "path": "/grainoflanguage/"},
+        {"title": "Evil Kid’s Monologue", "description": "Visual music", "year": "2024"},
+        {"title": "Volockenspiel", "description": "", "year": "2024", "path": "/volockenspiel/"},
+        {"title": "Memory, memory...", "description": "", "year": "2023", "path": "/memorymemory/"},
+        {"title": "Sitting on the Swing at the Event Horizon", "description": "", "year": "2022", "path": "/event-horizon/"}
+      ]
+    },
+    {
+      "id": "film-and-dance",
+      "title": "Film and Dance Works",
+      "items": [
+        {"title": "Mark", "description": "", "year": "2024", "path": "https://www.ladancechronicle.com/review-selcouth-dance-theater-company-presents-mark-at-highways/"},
+        {"title": "Sound of the Fire", "description": "", "year": "2024"},
+        {"title": "A Mermaid in a Summer’s Night", "description": "", "year": "2021", "path": "https://www.youtube.com/watch?v=bkh3pl0bH_I"},
+        {"title": "Time to Dream", "description": "", "year": "2020", "path": "https://www.timetodream.info/"}
+      ]
+    }
+  ]
+}

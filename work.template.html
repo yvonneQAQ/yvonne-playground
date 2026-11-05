@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="${page_description}">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="${page_title} | Yifeng Yvonne Yuan">
+  <title>${page_title} | Yifeng Yvonne Yuan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="work-page ${page_class}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="${name}'s Playground home"><span>${title}</span><span>${subtitle}</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar">${navigation_html}</aside>
+      <main class="work-content" id="main">
+        <a class="back-to-works" href="${back_url}">← ${back_label}</a>
+        <article class="work-article">
+          <h1>${page_heading}</h1>
+          ${page_blocks_html}
+        </article>
+        ${footer_html}
+      </main>
+    </div>
+  </div>
+  <script src="/site.js" defer></script>
+</body>
+</html>

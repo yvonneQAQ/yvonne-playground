@@ -8,8 +8,8 @@
     "about": "/about/",
     "github": "https://github.com/yvonneQAQ",
     "resume": "/assets/Yuan_Resume.pdf",
-    "works": "https://www.yvonneyuanmusic.com/listofworks",
-    "poetry": "https://www.yvonneyuanmusic.com/mypoetry",
+    "works": "/listofworks/",
+    "poetry": "/mypoetry/",
     "bandcamp": "https://yvonneyuan.bandcamp.com/",
     "soundcloud": "https://soundcloud.com/yifeng-yvonne-yuan",
     "instagram": "https://www.instagram.com/yifeng.yvonne.yuan/"
@@ -45,7 +45,7 @@
       {
         "title": "Field Poetry",
         "description": "An environment-responsive sound box connecting sensor data to generative music. Arduino / C++ / Max/MSP.",
-        "link": "https://www.yvonneyuanmusic.com/fieldpoetry",
+        "link": "/fieldpoetry/",
         "link_label": "Explore the work"
       }
     ],
