@@ -112,7 +112,7 @@
           "height": 120,
           "provider": "bandcamp",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_eadeec3b33a4ef6e59f73ba49cbe42fb.html",
-          "fallback_url": "#"
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/the-world-is-my-shelter-for-classical-guitar-and-electronics"
         },
         {
           "type": "paragraph",
@@ -176,7 +176,7 @@
           "height": 120,
           "provider": "bandcamp",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_7cf45061017375ae8ba81c5a6348aa38.html",
-          "fallback_url": "#"
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/we-all-inevitably-fall-into-the-abyss"
         },
         {
           "type": "paragraph",
@@ -223,7 +223,7 @@
           "height": 120,
           "provider": "bandcamp",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_d494ef6246c72853a729582ece78e2eb.html",
-          "fallback_url": "#"
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/i-saw-a-butterfly-nestled-in-a-bell"
         }
       ],
       "heading": "I Saw a Butterfly Nestled in a Bell (2024)"
@@ -343,7 +343,7 @@
           "title": "Di-Da-Doo-Dum for Electronics and Solo Voice (2022) — audio recording",
           "height": 120,
           "provider": "Bandcamp",
-          "fallback_url": "#",
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/di-da-doo-dum",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_4c06323a49f7fd0942ecbcda0a5f03ac.html"
         },
         {
@@ -412,7 +412,7 @@
           "title": "Human Anatomy for Pierrot Ensemble (2021) — audio recording",
           "height": 120,
           "provider": "Bandcamp",
-          "fallback_url": "#",
+          "fallback_url": "https://yvonneyuan.bandcamp.com/album/human-anatomy",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_0e1f150e5bcb62d1cbfbcf3662d1c73f.html"
         },
         {
@@ -437,7 +437,7 @@
           "title": "Ephemeral Bloom (2021) — audio recording",
           "height": 120,
           "provider": "Bandcamp",
-          "fallback_url": "#",
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/ephemeral-bloom-for-symphonic-orchestra",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_30a3191130c09edcfacd39923748e005.html"
         },
         {
@@ -498,7 +498,7 @@
           "title": "Shattered Moon for Trumpet and Electronics (2020) — audio recording",
           "height": 120,
           "provider": "Bandcamp",
-          "fallback_url": "#",
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/shattered-moon",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_f63872385b019a21f37ddbda8726961d.html"
         },
         {
@@ -790,7 +790,7 @@
           "provider": "bandcamp",
           "source_url": "https://www-yvonneyuanmusic-com.filesusr.com/html/a8bb45_1bfce6d633150dcf8aaa21d7c974b3bf.html",
           "height": 120,
-          "fallback_url": "#"
+          "fallback_url": "https://yvonneyuan.bandcamp.com/track/memory-memory"
         },
         {
           "type": "paragraph",
@@ -802,11 +802,6 @@
           "alt": "Memory, Memory... — Performance photograph",
           "width": 600,
           "height": 573
-        },
-        {
-          "type": "download",
-          "text": "Download Max patch and documentation",
-          "src": "https://drive.google.com/drive/folders/1YuOc9S9Ud9FzFjfyap6rWLWJqQIsXOsH?usp=share_link"
         },
         {
           "type": "paragraph",
@@ -830,7 +825,12 @@
         },
         {
           "type": "heading",
-          "text": "Download Max Patch\n\nand documentation"
+          "text": "Download Max Patch and documentation"
+        },
+        {
+          "type": "download",
+          "text": "Download Max patch and documentation",
+          "src": "https://drive.google.com/drive/folders/1YuOc9S9Ud9FzFjfyap6rWLWJqQIsXOsH?usp=share_link"
         }
       ],
       "heading": "Memory, memory..."

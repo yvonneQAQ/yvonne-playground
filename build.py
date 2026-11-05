@@ -77,8 +77,11 @@ def render_block(block, page_title):
             fallback = 'https://vimeo.com/' + block['src'].split('/video/')[-1].split('?')[0]
         if 'filesusr.com' in fallback:
             fallback = ''
+        if fallback and not fallback.startswith(('https://', 'http://')):
+            fallback = block.get('src', '')
         player = f'<iframe src="{src}" title="{title}" loading="lazy" height="{height}" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
-        link = f'<a class="media-fallback" href="{escape(fallback, quote=True)}">Open recording <span aria-hidden="true">↗</span></a>' if fallback else ''
+        label = 'Listen on Bandcamp' if is_audio else 'Watch on Vimeo' if provider == 'vimeo' else 'Watch on YouTube' if provider == 'youtube' else 'Open recording'
+        link = f'<a class="media-fallback" href="{escape(fallback, quote=True)}">{label} <span aria-hidden="true">↗</span></a>' if fallback else ''
         return '<div class="media-block ' + ('audio-embed' if is_audio else 'video-embed') + '">' + player + '</div>' + link
     if kind == 'download':
         label = escape(text or block.get('title') or 'Download')

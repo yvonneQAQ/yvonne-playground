@@ -29,6 +29,8 @@ The owner confirmed two corrections during migration: The World Is My Shelter is
 
 Works that had no detail page on the original list remain text-only entries. New material has not been invented for those works. The existing 22-event archive is unchanged by this migration.
 
+The owner confirmed that Evil Kid’s Monologue has no video or work description available; it remains a title-only entry in Multimedia. The other five Multimedia works have independent pages. Memory includes its performance video, Bandcamp recording, local photo, and the original Google Drive Max patch/documentation link. Recording fallback links use canonical platform URLs, and Memory's patch link follows the description.
+
 ## Source content to review later
 
 - The Typist detail page says January 19, 2025; the homepage event says January 18. Original wording is retained pending the owner's correction.
