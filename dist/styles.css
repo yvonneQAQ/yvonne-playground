@@ -31,7 +31,42 @@ footer p { margin:0 0 24px; }
 .social-links a:hover { color:var(--purple); }
 .copyright { margin-top:34px; color:var(--purple); font-size:13px; letter-spacing:1px; }
 .menu-toggle { display:none; }
+.about-content { max-width:600px; padding-top:20px; }
+.profile-header { display:grid; grid-template-columns:minmax(0,1fr) 174px; gap:30px; align-items:start; }
+.page-eyebrow { margin:0 0 18px; color:var(--purple); font-size:12px; letter-spacing:3.5px; text-transform:uppercase; }
+.profile-heading h1 { margin:0 0 18px; font-weight:400; font-size:34px; line-height:1.3; letter-spacing:-.6px; }
+.profile-identity { margin:0; color:var(--purple); font-size:20px; line-height:1.65; font-weight:400; text-wrap:balance; }
+.profile-portrait { display:block; width:174px; height:auto; }
+.profile-introduction { margin-top:30px; }
+.about-content p { font-size:15px; line-height:1.9; }
+.about-content .page-eyebrow { font-size:12px; line-height:1.5; }
+.about-content .profile-identity { font-size:20px; line-height:1.65; }
+.profile-introduction p { margin:0 0 17px; }
+.profile-links { display:flex; flex-wrap:wrap; gap:14px 28px; margin:26px 0 0; }
+.profile-links a { font-size:14px; text-decoration:none; border-bottom:1px solid #bca8ca; padding-bottom:5px; }
+.profile-links a:hover { color:var(--purple); border-bottom-color:var(--purple); }
+.profile-links .link-detail { font-size:11px; letter-spacing:1px; margin-left:6px; color:var(--purple); }
+.about-section { margin-top:54px; }
+.about-section h2 { margin:0 0 24px; color:var(--purple); font-size:23px; font-weight:400; line-height:1.4; letter-spacing:.4px; }
+.technical-area + .technical-area { margin-top:26px; }
+.technical-area h3,.about-project h3 { margin:0 0 8px; font-size:16px; font-weight:500; line-height:1.5; }
+.technical-area p,.about-project p,.artistic-practice p { margin:0; }
+.about-projects { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+.about-project { border-top:1px solid #ded4e5; padding-top:18px; }
+.about-project p { font-size:14px; }
+.about-project a { display:inline-block; margin-top:14px; font-size:13px; color:var(--purple); text-decoration:none; }
+.about-project a:hover { text-decoration:underline; }
+.profile-education { margin:0; }
+.education-entry + .education-entry { margin-top:22px; }
+.education-entry dt { font-size:15px; line-height:1.7; font-weight:500; }
+.education-entry dd { margin:3px 0 0; font-size:14px; line-height:1.8; }
+.education-entry dd span { display:block; color:#68616d; font-size:13px; }
+.artistic-practice blockquote { margin:30px 0 0; padding:0 0 0 18px; border-left:1px solid #bca8ca; color:var(--purple); font-style:italic; font-size:17px; line-height:1.9; }
+.about-content footer { margin-top:25px; }
+.about-content footer p { font-size:13px; }
+.about-page .main-nav a[aria-current="page"] { color:var(--purple); }
 @media (min-width:1440px) { .site-shell { max-width:1440px; padding-left:64px; padding-right:64px; } .page-layout { gap:108px; } }
+@media (min-width:701px) and (max-width:1000px) { .profile-header { grid-template-columns:minmax(0,1fr) 130px; gap:22px; } .profile-portrait { width:130px; } .profile-heading h1 { font-size:29px; } .about-content .profile-identity { font-size:18px; } }
 @media (max-width:1000px) { .site-shell { padding:48px 36px 0; } .page-layout { grid-template-columns:250px minmax(0,1fr); gap:35px; } .sidebar { padding-left:8px; } .main-nav a { font-size:15px; letter-spacing:3px; } .work-nav { padding-left:18px; } .work-nav a { letter-spacing:2.5px; } .hero { min-height:620px; } }
 @media (max-width:700px) {
   .site-shell { padding:30px 24px 0; }
@@ -51,5 +86,18 @@ footer p { margin:0 0 24px; }
   .events h1 { font-size:25px; margin-bottom:28px; }
   .event-list p { font-size:14px; margin-bottom:26px; line-height:1.85; }
   footer { padding-top:44px; font-size:12px; }
+  .about-content { padding-top:4px; }
+  .profile-header { grid-template-columns:minmax(0,1fr) 105px; gap:20px; }
+  .profile-portrait { width:105px; margin-top:4px; }
+  .page-eyebrow { margin-bottom:12px; }
+  .profile-heading h1 { font-size:27px; margin-bottom:12px; letter-spacing:-.4px; }
+  .about-content .profile-identity { font-size:17px; line-height:1.65; }
+  .about-content p { font-size:14px; }
+  .profile-introduction { margin-top:28px; }
+  .profile-links { gap:14px 24px; }
+  .about-section { margin-top:42px; }
+  .about-section h2 { font-size:22px; }
+  .about-projects { grid-template-columns:1fr; gap:26px; }
+  .artistic-practice blockquote { font-size:16px; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

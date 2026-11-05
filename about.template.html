@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yifeng (Yvonne) Yuan is an audio researcher, engineer and sound artist working with real-time DSP, C++/JUCE, Python, audio models, and interactive sound systems.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="About Yifeng (Yvonne) Yuan — Audio Researcher, Engineer & Sound Artist">
+  <meta property="og:description" content="Audio tools, real-time DSP, neural synthesis, and interactive sound systems.">
+  <meta property="og:image" content="https://yvonne-yuan-playground.yvonneyuanyf.chatgpt.site/assets/portrait.jpg">
+  <title>About | Yifeng Yvonne Yuan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="about-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="${name}'s Playground home"><span>${title}</span><span>${subtitle}</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar">${navigation_html}</aside>
+      <main class="about-content" id="main">
+        <section class="about-overview" aria-labelledby="profile-name">
+          <div class="profile-header">
+            <div class="profile-heading">
+              <p class="page-eyebrow">About</p>
+              <h1 id="profile-name">${about_name}</h1>
+              <p class="profile-identity">${about_identity}</p>
+            </div>
+            <img class="profile-portrait" src="/assets/portrait.jpg" width="1203" height="1600" alt="Black-and-white portrait of Yifeng Yvonne Yuan." fetchpriority="high">
+          </div>
+          <div class="profile-introduction">${about_introduction_html}</div>
+          <div class="profile-links" aria-label="Professional links">
+            <a href="${resume_url}" download="Yifeng_Yuan_Resume.pdf">Résumé <span class="link-detail">PDF ↓</span></a>
+            <a href="${github_url}">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="mailto:${email}">Email <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+        <section class="about-section" aria-labelledby="technical-heading">
+          <h2 id="technical-heading">Research &amp; engineering</h2>
+          <div class="technical-areas">${technical_areas_html}</div>
+        </section>
+        <section class="about-section" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected projects</h2>
+          <div class="about-projects">${selected_projects_html}</div>
+        </section>
+        <section class="about-section" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <dl class="profile-education">${education_html}</dl>
+        </section>
+        <section class="about-section artistic-practice" aria-labelledby="practice-heading">
+          <h2 id="practice-heading">Sound &amp; artistic practice</h2>
+          <p>${about_artistic_practice}</p>
+          <blockquote>${about_quote}</blockquote>
+        </section>
+        ${footer_html}
+      </main>
+    </div>
+  </div>
+  <script src="/site.js" defer></script>
+</body>
+</html>

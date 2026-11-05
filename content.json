@@ -5,12 +5,57 @@
   "email": "yifengyuan@ucsb.edu",
   "copyright": "@yvonneyuanmusic2025",
   "links": {
-    "about": "https://www.yvonneyuanmusic.com/about",
+    "about": "/about/",
+    "github": "https://github.com/yvonneQAQ",
+    "resume": "/assets/Yuan_Resume.pdf",
     "works": "https://www.yvonneyuanmusic.com/listofworks",
     "poetry": "https://www.yvonneyuanmusic.com/mypoetry",
     "bandcamp": "https://yvonneyuan.bandcamp.com/",
     "soundcloud": "https://soundcloud.com/yifeng-yvonne-yuan",
     "instagram": "https://www.instagram.com/yifeng.yvonne.yuan/"
+  },
+  "about": {
+    "name": "Yifeng (Yvonne) Yuan",
+    "identity": "Audio researcher, engineer and sound artist.",
+    "introduction": [
+      "I develop audio tools and interactive sound systems, working across audio plugin development, real-time DSP, audio model training, and live performance. My tools include C++/JUCE, Python, PyTorch, and Max/MSP.",
+      "I am a Ph.D. candidate in Computer Music at the University of California, Santa Barbara, and hold an M.S. in Media Arts and Technology from UCSB. My technical work is informed by a practice in composition, sound design, and critical listening."
+    ],
+    "technical_areas": [
+      {
+        "title": "Audio software & DSP",
+        "text": "I develop audio analysis plugins in C++/JUCE, including FFT-based spectral analysis, peak detection, feature-to-MIDI mapping, and smoothing. My SPEKANA plugin turns audio features into MIDI notes and control messages for creative music workflows."
+      },
+      {
+        "title": "Audio models & neural synthesis",
+        "text": "My work with RAVE includes preparing approximately 150 minutes of experimental vocal recordings, training models, comparing checkpoints through listening, and integrating neural synthesis into Max/MSP. I also build Python pipelines that connect pretrained vocal-analysis models to live effects over OSC."
+      },
+      {
+        "title": "Interactive systems & audio engineering",
+        "text": "I connect sensors and environmental data to generative sound using Arduino, C++, and Max/MSP. My live audio experience includes multichannel speaker mapping, performer-monitor routing, microphone placement, audio interfaces, mixers, and soundchecks."
+      }
+    ],
+    "selected_projects": [
+      {
+        "title": "SPEKANA",
+        "description": "Real-time audio analysis and audio-to-MIDI plugin. C++ / JUCE / VST3.",
+        "link": "https://github.com/yvonneQAQ/spekana-audio-plugin",
+        "link_label": "View on GitHub"
+      },
+      {
+        "title": "Field Poetry",
+        "description": "An environment-responsive sound box connecting sensor data to generative music. Arduino / C++ / Max/MSP.",
+        "link": "https://www.yvonneyuanmusic.com/fieldpoetry",
+        "link_label": "Explore the work"
+      }
+    ],
+    "education": [
+      {"degree": "Ph.D. Music (Computer Music)", "institution": "University of California, Santa Barbara", "date": "Expected Fall 2026"},
+      {"degree": "M.S. Media Arts and Technology", "institution": "University of California, Santa Barbara", "date": "2026"},
+      {"degree": "M.A. Music Composition", "institution": "University of California, Los Angeles", "date": "2021"}
+    ],
+    "artistic_practice": "I also work as a sound designer and film composer, with film work presented at the Venice Biennale and Busan International Film Festival. My artistic practice explores sound, voice, language, and the environments we inhabit.",
+    "quote": "I write poetry with grains of sound and discrete reality."
   },
   "events": [
     "Feb. 10th, 2026, I wrote you a letter. (a letter is what I wrote to you.), a pianosphere new artist event featuring House on Fire, 2220 Arts and Archieve, Los Angeles",
