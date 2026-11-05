@@ -2,18 +2,21 @@
 
 Source code for Yifeng Yvonne Yuan's portfolio of audio research, engineering, sound art, and composition. It contains 25 content pages and 7 redirects for unused Wix template/blank routes.
 
-The public website is **https://yvonneyuansplayground.com/**, hosted on OpenAI Sites. The custom domain was connected on November 4, 2026. The original Wix website and `yvonneyuanmusic.com` have not been redirected or removed.
+The production hostname is **https://yvonneyuansplayground.com/**. This repository contains the GitHub Pages publishing workflow. Namecheap manages the domain's DNS; switching its records completes the move from the previous OpenAI Sites host. The original Wix website and `yvonneyuanmusic.com` have not been redirected or removed.
 
-This GitHub repository preserves the site's source and existing Git history. GitHub Pages deployment is not configured yet. Pushing a commit to GitHub does **not** update the current Sites-hosted website.
+This GitHub repository preserves the site's source and existing Git history. The **Publish website** workflow builds and checks the site, then deploys it to GitHub Pages whenever a commit is pushed to `main`. It can also be run manually from the Actions tab.
 
 ## Editing and version control
 
-Git records versions of these files locally. GitHub stores a remote copy at https://github.com/yvonneQAQ/yvonne-playground. Sites currently serves the published website; GitHub Pages is a separate hosting option for a future migration.
+Git records versions of these files locally. GitHub stores the source at https://github.com/yvonneQAQ/yvonne-playground, and GitHub Pages serves the generated website after DNS cutover. The previous Sites deployment is retained during the transition.
+
+For a quick update without Codex or Terminal, open a content JSON file on GitHub, click the pencil, edit it, and choose **Commit changes** on `main`. Check the **Publish website** run at https://github.com/yvonneQAQ/yvonne-playground/actions. A successful deployment publishes the rebuilt website; a failed check leaves the last successful publication in place.
 
 For routine content updates, edit `content.json`, `works.json`, or `pages.json`, then run these commands from this directory:
 
 ```bash
 python3 build.py
+python3 scripts/verify_site.py
 python3 -m http.server 8765 --directory dist
 ```
 
@@ -28,11 +31,11 @@ git commit -m "Update events"
 git push github main
 ```
 
-The `git add` example is for an Events update. For other changes, include the content/template files actually edited and their generated `dist/` output. The GitHub remote is named `github`; the Sites workflow synchronizes its own source repository separately.
+The `git add` example is for an Events update. For other changes, include the content/template files actually edited and their generated `dist/` output. The GitHub remote is named `github`. A push to `main` starts the GitHub Pages publishing workflow.
 
-You can also edit JSON content directly on GitHub and commit it there. Until an automatic build/deployment workflow is added, this saves the source change only. Before working locally again, pull those changes with `git pull --ff-only github main`.
+You can also edit JSON content directly on GitHub and commit it there; the workflow rebuilds HTML from that source automatically. Before working locally again, pull those changes with `git pull --ff-only github main`.
 
-To publish through the current hosting setup, the updated source must also be synchronized with Sites and its matching static output deployed there. Local edits, Git commits, and GitHub pushes alone do not publish the website.
+The deployment workflow uses GitHub's built-in token and requires no personal tokens or hosting credentials in the repository. The build supports both the `/yvonne-playground` GitHub project URL and the custom domain root; `actions/configure-pages` supplies the appropriate base path.
 
 ## Files
 
@@ -46,9 +49,11 @@ To publish through the current hosting setup, the updated source must also be sy
 - `dist/styles.css`: desktop and mobile layout.
 - `dist/site.js`: mobile menu behavior.
 - `dist/assets/`: locally stored photos, score images, score PDF, resume, audio recording, and compressed film reel. Third-party YouTube, Vimeo, and Bandcamp players remain on those services.
-- `.openai/hosting.json`: current Sites project identity and static directory; it contains no deployment credentials.
+- `.github/workflows/deploy-pages.yml`: automatic build, link checks, and GitHub Pages deployment.
+- `scripts/verify_site.py`: checks generated pages, local files, internal anchors, and production metadata before deployment.
+- `.openai/hosting.json`: retained identity for the previous Sites host; GitHub Pages does not use it and it contains no deployment credentials.
 
-Run `python3 build.py` after changing the content or template. The output is a standalone static site in `dist/`; it needs no database, framework, package install, or server-side code.
+Run `python3 build.py` after changing the content or template. The output is a standalone static site in `dist/`; it needs no database, framework, package install, or server-side code. Edit templates and JSON rather than the generated HTML. Styles, JavaScript, and media remain tracked in `dist/`. The build also generates `robots.txt`, `sitemap.xml`, and production canonical URLs.
 
 ## Current migration boundary
 
@@ -78,12 +83,8 @@ The owner supplied IMDb profile `nm14342387`. Its three Composer credits were ve
 
 The visual direction intentionally follows the current site: a white background, purple two-line title, widely spaced left navigation, a large performance photo, and the existing event archive. Content is copied from the owner's public website for this first comparison, including existing date wording and spelling.
 
-## Future GitHub Pages migration
+## Hosting configuration and cutover
 
-1. Configure a GitHub Actions workflow to run `python3 build.py` and deploy `dist/` to GitHub Pages.
-2. Configure and verify the custom domain in GitHub Pages before changing Namecheap's DNS records.
-3. Account for root-relative links when testing: the existing site assumes it is served at a domain root, rather than under a project-repository subpath.
-4. Recheck third-party media, downloads, responsive navigation, and old URL paths on the new host.
-5. Switch DNS only after the new hosting configuration is ready, then verify HTTPS and both domain variants.
+GitHub repository Settings → Pages must use **GitHub Actions** as the publishing source. Configure `yvonneyuansplayground.com` as the custom domain there before changing DNS. At Namecheap, the apex uses GitHub Pages' four A records and `www` is a CNAME to `yvonneqaq.github.io` (without the repository name). Use the current addresses in GitHub's custom-domain documentation, then verify HTTPS and enable **Enforce HTTPS** once GitHub's certificate is ready.
 
-The existing Sites deployment remains the live website until that migration is completed. Domain registration is separate from website hosting. The old Wix domain's permanent redirect and any Wix plan changes are separate follow-up work.
+The previous Sites deployment remains available during the move. Domain registration is separate from website hosting. The old Wix domain's permanent redirect and any Wix plan changes are separate follow-up work.

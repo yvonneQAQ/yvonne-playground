@@ -3,9 +3,24 @@ from pathlib import Path
 from html import escape
 from string import Template
 import json
+import os
 import re
 
 ROOT = Path(__file__).resolve().parent
+SITE_URL = 'https://yvonneyuansplayground.com'
+base_path = os.environ.get('SITE_BASE_PATH', '').strip('/')
+BASE_PATH = '/' + base_path if base_path else ''
+published_paths = []
+
+
+def prepare_html(html):
+    """Support the GitHub project preview as well as the production domain root."""
+    if not BASE_PATH:
+        return html
+    html = re.sub(r'((?:href|src|poster)=[\"\'])(/(?!/))', lambda m: m[1] + BASE_PATH + m[2], html)
+    return html.replace('content="0;url=/', 'content="0;url=' + BASE_PATH + '/')
+
+
 data = json.loads((ROOT / 'content.json').read_text())
 links = data['links']
 values = {key: escape(str(value), quote=True) for key, value in data.items() if isinstance(value, str)}
@@ -30,7 +45,10 @@ values['education_html'] = '\n'.join(
 
 def render_page(page, template_name, output, extra=None):
     context = dict(values)
+    public_path = '/' + output.removesuffix('index.html')
     context.update({
+        'canonical_url': SITE_URL + public_path,
+        'site_url': SITE_URL,
         'home_current': ' aria-current="page"' if page == 'home' else '',
         'about_current': ' aria-current="page"' if page == 'about' else '',
         'works_current': ' aria-current="page"' if page == 'works' else '',
@@ -42,7 +60,8 @@ def render_page(page, template_name, output, extra=None):
         context[partial + '_html'] = Template((ROOT / (partial + '.template.html')).read_text()).substitute(context)
     target = ROOT / 'dist' / output
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(Template((ROOT / template_name).read_text()).substitute(context))
+    target.write_text(prepare_html(Template((ROOT / template_name).read_text()).substitute(context)))
+    published_paths.append(public_path)
     print('Built', target.relative_to(ROOT))
 
 
@@ -148,4 +167,8 @@ if pages_file.exists():
         target = ROOT / 'dist' / old_path.strip('/') / 'index.html'
         target.parent.mkdir(parents=True, exist_ok=True)
         href = escape(destination, quote=True)
-        target.write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=' + href + '"><title>Yifeng Yvonne Yuan</title><link rel="canonical" href="' + href + '"></head><body><p><a href="' + href + '">Continue to Yifeng Yvonne Yuan’s website</a></p></body></html>')
+        target.write_text(prepare_html('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=' + href + '"><title>Yifeng Yvonne Yuan</title><link rel="canonical" href="' + href + '"></head><body><p><a href="' + href + '">Continue to Yifeng Yvonne Yuan’s website</a></p></body></html>'))
+
+(ROOT / 'dist' / '.nojekyll').touch()
+(ROOT / 'dist' / 'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: ' + SITE_URL + '/sitemap.xml\n')
+(ROOT / 'dist' / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join('  <url><loc>' + escape(SITE_URL + path) + '</loc></url>' for path in published_paths) + '\n</urlset>\n')
