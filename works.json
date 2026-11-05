@@ -36,10 +36,12 @@
     {
       "id": "film-and-dance",
       "title": "Film and Dance Works",
+      "intro_link": {"label": "View film credits on IMDb", "url": "https://www.imdb.com/name/nm14342387/"},
       "items": [
+        {"title": "Gu Shi", "description": "Film score · Directed by Amie Song", "year": "2026", "path": "https://www.imdb.com/title/tt44933953/", "link_label": "IMDb"},
+        {"title": "Sound of Fire", "description": "Film score · Directed by Mingjie Li", "year": "2024", "path": "https://www.imdb.com/title/tt38525789/", "link_label": "IMDb"},
+        {"title": "A Mermaid in a Summer’s Night", "description": "Film score · Directed by Ke Liu", "year": "2021", "path": "https://www.imdb.com/title/tt24510892/", "link_label": "IMDb", "additional_links": [{"label": "Watch trailer", "url": "https://www.youtube.com/watch?v=bkh3pl0bH_I"}]},
         {"title": "Mark", "description": "", "year": "2024", "path": "https://www.ladancechronicle.com/review-selcouth-dance-theater-company-presents-mark-at-highways/"},
-        {"title": "Sound of the Fire", "description": "", "year": "2024"},
-        {"title": "A Mermaid in a Summer’s Night", "description": "", "year": "2021", "path": "https://www.youtube.com/watch?v=bkh3pl0bH_I"},
         {"title": "Time to Dream", "description": "", "year": "2020", "path": "https://www.timetodream.info/"}
       ]
     }

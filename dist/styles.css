@@ -112,6 +112,13 @@ footer p { margin:0 0 24px; }
 .work-list-title a { color:var(--purple); text-decoration-thickness:1px; }
 .work-list-title a:hover { text-decoration-color:transparent; }
 .work-list-details { display:block; font-size:14px; color:#625c68; line-height:1.8; margin-top:3px; }
+.work-link-label { display:inline-block; margin-left:9px; font-size:11px; letter-spacing:.6px; white-space:nowrap; }
+.category-link { margin:-12px 0 28px; font-size:13px; line-height:1.8; color:var(--purple); }
+.category-link a { text-decoration:none; }
+.category-link a:hover { text-decoration:underline; }
+.work-additional-links { display:flex; flex-wrap:wrap; gap:16px; margin-top:6px; font-size:12px; line-height:1.8; color:var(--purple); }
+.work-additional-links a { text-decoration:none; }
+.work-additional-links a:hover { text-decoration:underline; }
 .back-to-works { display:inline-block; font-size:12px; letter-spacing:.6px; color:var(--purple); text-decoration:none; margin:0 0 28px; }
 .back-to-works:hover { text-decoration:underline; }
 .work-article h1 { margin:0 0 26px; font-size:25px; line-height:1.55; font-weight:400; color:var(--purple); letter-spacing:.2px; overflow-wrap:anywhere; }

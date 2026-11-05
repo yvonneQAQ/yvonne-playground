@@ -107,12 +107,16 @@ for category in works['categories']:
     for item in category['items']:
         title = escape(item['title'])
         if item.get('path'):
+            if item.get('link_label'):
+                title += ' <span class="work-link-label">' + escape(item['link_label']) + '<span aria-hidden="true"> ↗</span></span>'
             title = '<a href="' + escape(item['path'], quote=True) + '">' + title + '</a>'
             category_by_path[item['path']] = category
         description = escape(item.get('description', ''))
         details = ' '.join(s for s in (description, '(' + escape(item['year']) + ')') if s)
-        items.append('<li><span class="work-list-title">' + title + '</span><span class="work-list-details">' + details + '</span></li>')
-    sections.append('<section class="work-category" id="' + category['id'] + '"><h2>' + escape(category['title']) + '</h2><ul class="work-list">' + '\n'.join(items) + '</ul></section>')
+        additional_links = '<div class="work-additional-links">' + ''.join('<a href="' + escape(link['url'], quote=True) + '">' + escape(link['label']) + '<span aria-hidden="true"> ↗</span></a>' for link in item['additional_links']) + '</div>' if item.get('additional_links') else ''
+        items.append('<li><span class="work-list-title">' + title + '</span><span class="work-list-details">' + details + '</span>' + additional_links + '</li>')
+    intro_link = '<p class="category-link"><a href="' + escape(category['intro_link']['url'], quote=True) + '">' + escape(category['intro_link']['label']) + '<span aria-hidden="true"> ↗</span></a></p>' if category.get('intro_link') else ''
+    sections.append('<section class="work-category" id="' + category['id'] + '"><h2>' + escape(category['title']) + '</h2>' + intro_link + '<ul class="work-list">' + '\n'.join(items) + '</ul></section>')
 render_page('works', 'works.template.html', 'listofworks/index.html', {'works_sections_html': '\n'.join(sections)})
 
 pages_file = ROOT / 'pages.json'

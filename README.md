@@ -35,7 +35,11 @@ The owner confirmed that Evil Kid’s Monologue has no video or work description
 
 - The Typist detail page says January 19, 2025; the homepage event says January 18. Original wording is retained pending the owner's correction.
 - Memory's detail page says June 1, 2023; the homepage MAT event says June 9. These may refer to different events; neither was silently changed.
-- Film/dance list titles and years follow the original page, including Sound of the Fire (2024). The additional festival events researched separately have not been added.
+- Film/dance project years follow the original page. IMDb lists Sound of Fire as a 2025 release and A Mermaid in a Summer's Night as a 2024 release; the portfolio's existing creation/project years (2024 and 2021) are retained. Sound of Fire's title now follows IMDb. The additional festival events researched separately have not been added.
+
+## Film links
+
+The owner supplied IMDb profile `nm14342387`. Its three Composer credits were verified: Gu Shi `tt44933953`, Sound of Fire `tt38525789`, and A Mermaid in a Summer's Night `tt24510892`. Film titles link to their IMDb pages, with the existing Mermaid trailer retained as a secondary link. Mark and Time to Dream retain their original dance/project links. Film and Dance also links to the full IMDb profile.
 
 The visual direction intentionally follows the current site: a white background, purple two-line title, widely spaced left navigation, a large performance photo, and the existing event archive. Content is copied from the owner's public website for this first comparison, including existing date wording and spelling.
 
