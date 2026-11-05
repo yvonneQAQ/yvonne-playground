@@ -34,6 +34,7 @@ def render_page(page, template_name, output, extra=None):
         'home_current': ' aria-current="page"' if page == 'home' else '',
         'about_current': ' aria-current="page"' if page == 'about' else '',
         'works_current': ' aria-current="page"' if page == 'works' else '',
+        'poetry_current': ' aria-current="page"' if page == 'poetry' else '',
         'events_url': '#events' if page == 'home' else '/#events',
     })
     context.update(extra or {})
@@ -53,6 +54,11 @@ def text_html(text):
 def render_block(block, page_title):
     kind = block['type']
     text = block.get('text', '')
+    if kind == 'poem':
+        heading = '<h2>' + escape(block['heading']) + '</h2>' if block.get('heading') else ''
+        label = block.get('heading') or text.splitlines()[0]
+        stanzas = ''.join('<div class="poem-stanza">' + ''.join('<span class="poem-line">' + escape(line) + '</span>' for line in stanza.splitlines()) + '</div>' for stanza in re.split(r'\n\s*\n', text))
+        return '<section class="poem" id="' + escape(block['id'], quote=True) + '" aria-label="' + escape(label, quote=True) + '">' + heading + '<div class="poem-verse">' + stanzas + '</div></section>'
     if kind in ('paragraph', 'heading', 'verse'):
         if kind == 'verse':
             return '<div class="verse" lang="zh-Hans">' + escape(text) + '</div>'
@@ -129,7 +135,7 @@ if pages_file.exists():
         back_label = category['title'] if category else ('Home' if is_poetry else 'Poetry' if page.get('category') == 'poetry' else 'Works')
         blocks = page['blocks']
         heading = page.get('heading') or page['title']
-        render_page('work', 'work.template.html', page['slug'] + '/index.html', {
+        render_page('poetry' if is_poetry else 'work', 'poetry.template.html' if is_poetry else 'work.template.html', page['slug'] + '/index.html', {
             'page_title': escape(page['title'], quote=True),
             'page_heading': escape(heading),
             'page_description': escape(page.get('description') or page['title'] + ' — a work by Yifeng Yvonne Yuan.', quote=True),

@@ -143,6 +143,15 @@ footer p { margin:0 0 24px; }
 .native-audio .audio-artist { font-size:13px; color:#625c68; margin-bottom:14px; }
 .verse { font-family:"PingFang SC","Noto Sans CJK SC",sans-serif; white-space:pre-wrap; font-size:15px; line-height:2.1; margin:0 0 50px; }
 .works-page .main-nav a[aria-current="page"] { color:var(--purple); }
+.poetry-page .main-nav a[aria-current="page"] { color:var(--purple); }
+.poetry-title { color:var(--purple); font-size:25px; font-weight:400; line-height:1.5; letter-spacing:.4px; margin:0 0 42px; }
+.poems { font-family:"Songti SC","STSong","Noto Serif CJK SC",serif; font-size:16px; line-height:2.15; }
+.poem { scroll-margin-top:40px; }
+.poem + .poem { margin-top:66px; }
+.poem h2 { margin:0 0 24px; font-size:19px; font-weight:500; line-height:1.8; color:var(--purple); }
+.poem-stanza + .poem-stanza { margin-top:1em; }
+.poem-line { display:block; padding-left:1em; text-indent:-1em; overflow-wrap:break-word; white-space:pre-wrap; line-break:strict; }
+.poetry-content footer { margin-top:20px; }
 @media (max-width:700px) {
   .works-content,.work-content { padding-top:4px; }
   .work-category h2 { font-size:22px; margin-bottom:22px; }
@@ -155,4 +164,8 @@ footer p { margin:0 0 24px; }
   .work-article h2 { font-size:17px; }
   .back-to-works { margin-bottom:24px; }
   .verse { font-size:14px; line-height:2.15; }
+  .poetry-title { font-size:23px; margin-bottom:34px; }
+  .poems { font-size:15px; line-height:2.2; }
+  .poem + .poem { margin-top:52px; }
+  .poem h2 { font-size:18px; margin-bottom:20px; }
 }

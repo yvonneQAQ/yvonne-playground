@@ -9,6 +9,7 @@ This is a code-maintained reconstruction of the owner's Wix portfolio, with the 
 - `pages.json`: editable work descriptions, credits, poems, media URLs, and old-route redirects.
 - `asset-manifest.json`: local static files with original source URLs and sizes.
 - `homepage.template.html`, `about.template.html`, `works.template.html`, and `work.template.html`: page structures.
+- `poetry.template.html`: the reading layout for the original Chinese poems.
 - `navigation.template.html` and `footer.template.html`: shared navigation and footer.
 - `dist/styles.css`: desktop and mobile layout.
 - `dist/site.js`: mobile menu behavior.
@@ -30,6 +31,8 @@ The owner confirmed two corrections during migration: The World Is My Shelter is
 Works that had no detail page on the original list remain text-only entries. New material has not been invented for those works. The existing 22-event archive is unchanged by this migration.
 
 The owner confirmed that Evil Kid’s Monologue has no video or work description available; it remains a title-only entry in Multimedia. The other five Multimedia works have independent pages. Memory includes its performance video, Bandcamp recording, local photo, and the original Google Drive Max patch/documentation link. Recording fallback links use canonical platform URLs, and Memory's patch link follows the description.
+
+Poetry uses five separate sections matching the original page's larger breaks. Its three existing titled pieces retain their title/date lines; the two untitled pieces retain their opening lines as verse. Original words, punctuation, dates, line order, and stanza breaks are preserved. The reading layout uses local Chinese serif fonts, extra space between poems, and a hanging indent when a long authored line wraps on narrow screens. Poetry navigation points to `/mypoetry/` and marks that page as current. Text scores and the family recording remain available at their existing separate URLs.
 
 ## Source content to review later
 
