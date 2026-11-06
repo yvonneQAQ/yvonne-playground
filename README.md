@@ -2,13 +2,13 @@
 
 Source code for Yifeng Yvonne Yuan's portfolio of audio research, engineering, sound art, and composition. It contains 25 content pages and 7 redirects for unused Wix template/blank routes.
 
-The production hostname is **https://yvonneyuansplayground.com/**. This repository contains the GitHub Pages publishing workflow. Namecheap manages the domain's DNS; switching its records completes the move from the previous OpenAI Sites host. The original Wix website and `yvonneyuanmusic.com` have not been redirected or removed.
+The public website is **https://yvonneyuansplayground.com/**, hosted on **GitHub Pages**. Namecheap manages the domain's DNS. DNS cutover, both HTTPS certificates, and GitHub's Enforce HTTPS setting were verified on November 5, 2026. The original Wix website and `yvonneyuanmusic.com` have not been redirected or removed.
 
 This GitHub repository preserves the site's source and existing Git history. The **Publish website** workflow builds and checks the site, then deploys it to GitHub Pages whenever a commit is pushed to `main`. It can also be run manually from the Actions tab.
 
 ## Editing and version control
 
-Git records versions of these files locally. GitHub stores the source at https://github.com/yvonneQAQ/yvonne-playground, and GitHub Pages serves the generated website after DNS cutover. The previous Sites deployment is retained during the transition.
+Git records versions of these files locally. GitHub stores the source at https://github.com/yvonneQAQ/yvonne-playground, and GitHub Pages serves the generated website. The previous Sites deployment is retained as an older copy; current updates are published from this GitHub repository.
 
 For a quick update without Codex or Terminal, open a content JSON file on GitHub, click the pencil, edit it, and choose **Commit changes** on `main`. Check the **Publish website** run at https://github.com/yvonneQAQ/yvonne-playground/actions. A successful deployment publishes the rebuilt website; a failed check leaves the last successful publication in place.
 
@@ -87,4 +87,4 @@ The visual direction intentionally follows the current site: a white background,
 
 GitHub repository Settings → Pages must use **GitHub Actions** as the publishing source. Configure `yvonneyuansplayground.com` as the custom domain there before changing DNS. At Namecheap, the apex uses GitHub Pages' four A records and `www` is a CNAME to `yvonneqaq.github.io` (without the repository name). Use the current addresses in GitHub's custom-domain documentation, then verify HTTPS and enable **Enforce HTTPS** once GitHub's certificate is ready.
 
-The previous Sites deployment remains available during the move. Domain registration is separate from website hosting. The old Wix domain's permanent redirect and any Wix plan changes are separate follow-up work.
+The previous Sites deployment remains available as an older copy. Domain registration is separate from website hosting. The old Wix domain's permanent redirect and any Wix plan changes are separate follow-up work.
