@@ -187,14 +187,20 @@ footer p { margin:0 0 24px; }
 .tools-feature,.tools-project { border-top:1px solid #ded4e5; padding-top:20px; }
 .tools-meta { color:var(--purple); font-size:12px; line-height:1.5; letter-spacing:.08em; margin:0 0 7px; }
 .tools-feature h2,.tools-project h2 { font-size:26px; font-weight:400; margin:0 0 9px; }
+.tools-feature h2 a,.tools-project h2 a { text-decoration-thickness:1px; text-decoration-color:#a882ba; }
+.tools-feature h2 a:hover,.tools-project h2 a:hover { color:var(--purple); text-decoration-color:currentColor; }
+.tools-feature h2 a span,.tools-project h2 a span { color:var(--purple); font-size:.72em; display:inline-block; margin-left:.2em; }
 .tools-feature > p:not(.tools-meta),.tools-project > p:not(.tools-meta) { margin:0; font-size:15px; line-height:1.65; }
 .tools-links { display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:15px; }
 .tools-links a { color:var(--purple); font-size:13px; line-height:1.6; text-decoration-thickness:1px; }
 .tools-links a:hover { text-decoration:none; }
 .tools-figure { margin:20px 0 0; }
+.tools-figure > a { display:block; }
 .tools-figure img { display:block; width:100%; height:auto; border-radius:4px; }
 .tools-figure figcaption { margin-top:8px; color:#5f5764; font-size:12px; line-height:1.6; }
 .tools-projects { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; margin-top:37px; }
+.tools-project { display:flex; flex-direction:column; }
+.tools-project .tools-figure { margin-top:auto; padding-top:20px; }
 .tools-project h2 { font-size:21px; }
 .tools-project-wide { grid-column:1 / -1; }
 .tools-profile { margin-top:40px; }

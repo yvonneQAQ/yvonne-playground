@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480">
+  <defs>
+    <linearGradient id="blend">
+      <stop stop-color="#b9dfd3"/>
+      <stop offset="1" stop-color="#dec3e7"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="480" fill="#272234"/>
+  <g font-family="Avenir Next, Avenir, Arial, sans-serif">
+    <text x="48" y="64" fill="#eee4f3" font-size="23" letter-spacing="2">RAVE VOCAL TEXTURES</text>
+    <path d="M48 92H672" fill="none" stroke="#685e74"/>
+    <text x="48" y="158" fill="#c4e9dd" font-size="45" font-weight="600">Flow</text>
+    <text x="672" y="158" fill="#ebd1ef" font-size="45" font-weight="600" text-anchor="end">Burst</text>
+    <text x="48" y="199" fill="#eee4f3" font-size="26">Sustained voice</text>
+    <text x="672" y="199" fill="#eee4f3" font-size="26" text-anchor="end">Abrupt gestures</text>
+    <path d="M48 256 Q77 218 104 256 T160 256 T216 256 T272 256 T328 256" fill="none" stroke="#b9dfd3" stroke-width="4" stroke-linecap="round"/>
+    <path d="M392 256H415L429 239L442 277L459 224L475 275L490 242L503 256H527L538 247L549 266L564 227L579 274L595 238L611 256H672" fill="none" stroke="#dec3e7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M52 333H668" fill="none" stroke="url(#blend)" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="52" cy="333" r="9" fill="#b9dfd3"/>
+    <circle cx="668" cy="333" r="9" fill="#dec3e7"/>
+    <text x="360" y="397" fill="#fff" font-size="29" text-anchor="middle">Grip pressure blends the textures</text>
+  </g>
+</svg>

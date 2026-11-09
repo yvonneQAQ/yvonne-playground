@@ -64,14 +64,6 @@
           "text": "Signal flow"
         },
         {
-          "type": "image",
-          "src": "/assets/audio-tools/affective-envelope-follower/signal-flow.jpg",
-          "alt": "The original flowchart traces voice input through wav2vec 2.0 analysis, OSC messages, effect mapping in Max/MSP, and the processed vocal output.",
-          "caption": "Signal flow from the UC Riverside conference presentation. Select the image to see it at full size.",
-          "width": 1280,
-          "height": 720
-        },
-        {
           "type": "signal-flow",
           "steps": [
             {"title": "Microphone", "text": "Capture mono audio at 16 kHz."},

@@ -1,5 +1,15 @@
 [
   {
+    "file": "assets/audio-tools/field-poetry-exhibition.jpg",
+    "source_url": "https://show.mat.ucsb.edu/2025/image/poetry.jpeg",
+    "bytes": 157177
+  },
+  {
+    "file": "assets/audio-tools/glitch-voice-flow-burst.svg",
+    "source": "Concept diagram based on the Glitch Voice RAVE prototype description",
+    "bytes": 1578
+  },
+  {
     "file": "assets/audio-tools/affective-envelope-follower/signal-flow.jpg",
     "source": "User-supplied conference presentation, slide 8",
     "bytes": 71111
