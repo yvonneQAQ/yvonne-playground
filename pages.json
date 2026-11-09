@@ -13,9 +13,9 @@
         {
           "type": "image",
           "src": "/assets/audio-tools/spekana-ui.png",
-          "alt": "SPEKANA showing a spectrogram, a list of detected peaks, and six captured chords on a grand staff.",
-          "width": 1714,
-          "height": 930
+          "alt": "SPEKANA’s spectrogram and six analysis charts, with capture controls and a spectral peak list on the right.",
+          "width": 1920,
+          "height": 1292
         },
         {
           "type": "heading",
