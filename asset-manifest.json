@@ -1,5 +1,30 @@
 [
   {
+    "file": "assets/audio-tools/affective-envelope-follower/signal-flow.jpg",
+    "source": "User-supplied conference presentation, slide 8",
+    "bytes": 71111
+  },
+  {
+    "file": "assets/audio-tools/affective-envelope-follower/vocal-analysis.mp4",
+    "source": "User-supplied conference presentation, slide 7",
+    "bytes": 914363
+  },
+  {
+    "file": "assets/audio-tools/affective-envelope-follower/vocal-analysis-poster.jpg",
+    "source": "Frame from the live affect monitor demo",
+    "bytes": 25949
+  },
+  {
+    "file": "assets/audio-tools/affective-envelope-follower/max-effects.mp4",
+    "source": "User-supplied conference presentation, slide 10",
+    "bytes": 10726665
+  },
+  {
+    "file": "assets/audio-tools/affective-envelope-follower/max-effects-poster.jpg",
+    "source": "Frame from the live vocal effects demo",
+    "bytes": 38053
+  },
+  {
     "file": "assets/audio-tools/spekana-ui.png",
     "source_url": "https://raw.githubusercontent.com/yvonneQAQ/spekana-audio-plugin/main/docs/spekana-ui.png",
     "bytes": 367975

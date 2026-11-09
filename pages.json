@@ -64,6 +64,14 @@
           "text": "Signal flow"
         },
         {
+          "type": "image",
+          "src": "/assets/audio-tools/affective-envelope-follower/signal-flow.jpg",
+          "alt": "The original flowchart traces voice input through wav2vec 2.0 analysis, OSC messages, effect mapping in Max/MSP, and the processed vocal output.",
+          "caption": "Signal flow from the UC Riverside conference presentation. Select the image to see it at full size.",
+          "width": 1280,
+          "height": 720
+        },
+        {
           "type": "signal-flow",
           "steps": [
             {"title": "Microphone", "text": "Capture mono audio at 16 kHz."},
@@ -74,11 +82,29 @@
         },
         {
           "type": "heading",
+          "text": "Live affect monitor"
+        },
+        {
+          "type": "video",
+          "src": "/assets/audio-tools/affective-envelope-follower/vocal-analysis.mp4",
+          "poster": "/assets/audio-tools/affective-envelope-follower/vocal-analysis-poster.jpg",
+          "title": "Live affect monitor demonstration",
+          "caption": "The monitor displays the model’s arousal, dominance, and valence estimates while the microphone is active."
+        },
+        {
+          "type": "heading",
           "text": "Mapping voice to effects"
         },
         {
           "type": "paragraph",
           "text": "I mapped arousal to distortion, valence to reverb and delay, and dominance to granulation. I also used arousal thresholds to switch between different breath layers. These mappings let the performer hear how changes in the model’s estimates alter the processed voice."
+        },
+        {
+          "type": "video",
+          "src": "/assets/audio-tools/affective-envelope-follower/max-effects.mp4",
+          "poster": "/assets/audio-tools/affective-envelope-follower/max-effects-poster.jpg",
+          "title": "Live vocal effects in Max/MSP",
+          "caption": "The Max/MSP patch receives OSC data, maps the estimates to effects, and processes the voice live."
         },
         {
           "type": "heading",

@@ -93,11 +93,12 @@ def render_block(block, page_title):
         return f'<ol class="signal-flow">{steps}</ol>'
     src = escape(block.get('src', ''), quote=True)
     title = escape(block.get('title') or page_title, quote=True)
+    caption = '<figcaption>' + escape(block['caption']) + '</figcaption>' if block.get('caption') else ''
     if kind == 'image':
         alt = escape(block.get('alt') or page_title + ' — score or artwork', quote=True)
         width, height = block.get('width'), block.get('height')
         dimensions = f' width="{int(width)}" height="{int(height)}"' if width and height else ''
-        return f'<figure class="work-image"><a href="{src}" target="_blank" rel="noopener" aria-label="Open image: {alt}"><img src="{src}" alt="{alt}" loading="lazy"{dimensions}></a></figure>'
+        return f'<figure class="work-image"><a href="{src}" target="_blank" rel="noopener" aria-label="Open image: {alt}"><img src="{src}" alt="{alt}" loading="lazy"{dimensions}></a>{caption}</figure>'
     if kind == 'embed':
         provider = block.get('provider', '').lower()
         is_audio = provider == 'bandcamp' or 'bandcamp.com' in block.get('src', '')
@@ -124,7 +125,8 @@ def render_block(block, page_title):
         return f'<div class="native-audio"><p>{title}</p>{artist}<audio controls preload="metadata" src="{src}"><a href="{src}">Listen to {title}</a></audio></div>'
     if kind == 'video':
         poster = ' poster="' + escape(block['poster'], quote=True) + '"' if block.get('poster') else ''
-        return f'<video class="native-video" controls playsinline preload="metadata"{poster} src="{src}" aria-label="{title}"><a href="{src}">Watch {title}</a></video>'
+        player = f'<video class="native-video" controls playsinline preload="metadata"{poster} src="{src}" aria-label="{title}"><a href="{src}">Watch {title}</a></video>'
+        return f'<figure class="work-video">{player}{caption}</figure>' if caption else player
     raise ValueError('Unsupported content block: ' + kind)
 
 
