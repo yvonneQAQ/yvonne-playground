@@ -193,14 +193,20 @@ footer p { margin:0 0 24px; }
 .tools-figure figcaption { margin-top:8px; color:#5f5764; font-size:12px; line-height:1.6; }
 .tools-projects { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; margin-top:37px; }
 .tools-project h2 { font-size:21px; }
+.tools-project-wide { grid-column:1 / -1; }
 .tools-profile { margin-top:40px; }
 .audio-tool-page .work-content { max-width:680px; }
 .audio-tool-page .work-article h1 { margin-bottom:19px; }
+.signal-flow { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 24px; margin:0 0 28px; padding:0; list-style-position:inside; }
+.signal-flow li { border-top:1px solid #ded4e5; padding-top:10px; color:#504a54; font-size:14px; line-height:1.65; }
+.signal-flow li::marker { color:var(--purple); }
+.signal-flow strong { color:var(--ink); font-weight:600; }
+.signal-flow li span { display:block; margin-top:3px; }
 @media (max-width:700px) {
   .audio-tools-content { padding-top:4px; }
   .tools-intro { margin-bottom:29px; }
   .tools-intro > p:last-child { font-size:16px; }
 }
 @media (max-width:560px) {
-  .tools-projects { grid-template-columns:1fr; }
+  .tools-projects,.signal-flow { grid-template-columns:1fr; }
 }

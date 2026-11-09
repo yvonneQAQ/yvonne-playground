@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Glitch Voice prototype using Python, wav2vec 2.0, OSC, and Max/MSP to shape live vocal effects.">
+  <link rel="canonical" href="https://yvonneyuansplayground.com/audio-tools/affective-envelope-follower/">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Glitch Voice — Affective Envelope Follower | Yifeng Yvonne Yuan">
+  <title>Glitch Voice — Affective Envelope Follower | Yifeng Yvonne Yuan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="work-page audio-tool-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Yifeng Yvonne Yuan's Playground home"><span>YIFENG YVONNE YUAN&#x27;S</span><span>PLAYGROUND</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar"><nav id="site-nav" aria-label="Main navigation">
+  <ul class="main-nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/audio-tools/">Audio Tools</a></li>
+    <li>
+      <a href="/listofworks/">Works</a>
+      <ul class="work-nav">
+        <li><a href="/listofworks/#contemporary-music">Contemporary Music</a></li>
+        <li><a href="/listofworks/#multimedia">Multimedia</a></li>
+        <li><a href="/listofworks/#film-and-dance">Dance and Film</a></li>
+        <li><a href="/mypoetry/">Poetry</a></li>
+      </ul>
+    </li>
+    <li class="nav-events"><a href="/#events">Event</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</aside>
+      <main class="work-content" id="main">
+        <a class="back-to-works" href="/audio-tools/">← Audio Tools</a>
+        <article class="work-article">
+          <h1>Affective Envelope Follower</h1>
+          <p>I built this Glitch Voice prototype to explore how changes in vocal expression could control live effects alongside loudness. A pretrained audEERING wav2vec 2.0 model estimates arousal, valence, and dominance from the microphone. I use those estimates as continuous controls for processing the same voice in Max/MSP.</p>
+<h2>Signal flow</h2>
+<ol class="signal-flow"><li><strong>Microphone</strong><span>Capture mono audio at 16 kHz.</span></li><li><strong>Python + wav2vec 2.0</strong><span>Estimate arousal, valence, and dominance on rolling 1-second windows with a 250 ms hop.</span></li><li><strong>OSC</strong><span>Send the latest smoothed values from a dedicated thread at a configurable rate, 30 Hz by default.</span></li><li><strong>Max/MSP</strong><span>Map the estimates to effect parameters and triggers in the live vocal patch.</span></li></ol>
+<h2>Mapping voice to effects</h2>
+<p>I mapped arousal to distortion, valence to reverb and delay, and dominance to granulation. I also used arousal thresholds to switch between different breath layers. These mappings let the performer hear how changes in the model’s estimates alter the processed voice.</p>
+<h2>Smoothing and response time</h2>
+<p>I gated descriptor updates by RMS level and smoothed the estimates to reduce jitter. In the conference talk, I reported an initial response after about 0.4–0.6 seconds and a stable value after about 1.5–2.5 seconds. Smoothing made the controls steadier, with a slower response to sudden vocal changes.</p>
+<p>I demonstrated this prototype at Co-Creativity in Music, Sound, and AI at UC Riverside in June 2026.</p>
+<p class="work-download"><a href="https://github.com/audeering/w2v2-how-to">Read audEERING’s model documentation <span aria-hidden="true">↗</span></a></p>
+<p class="work-download"><a href="/audio-tools/glitch-voice/">Explore the related Glitch Voice RAVE prototype <span aria-hidden="true">↗</span></a></p>
+        </article>
+        <footer id="contact">
+  <p>Email <a href="mailto:yifengyuan@ucsb.edu">yifengyuan@ucsb.edu</a> for scores and collaboration</p>
+  <div class="social-links" aria-label="Listen and follow">
+    <a href="https://yvonneyuan.bandcamp.com/">Bandcamp</a>
+    <a href="https://soundcloud.com/yifeng-yvonne-yuan">SoundCloud</a>
+    <a href="https://www.instagram.com/yifeng.yvonne.yuan/">Instagram</a>
+  </div>
+  <p class="copyright">@yvonneyuanmusic2025</p>
+</footer>
+
+      </main>
+    </div>
+  </div>
+  <script src="/site.js" defer></script>
+</body>
+</html>

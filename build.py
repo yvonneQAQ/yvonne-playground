@@ -85,6 +85,12 @@ def render_block(block, page_title):
         if kind == 'heading' and len(text) < 140 and '\n' not in text:
             return '<h2>' + escape(text) + '</h2>'
         return '\n'.join('<p>' + text_html(p.strip()) + '</p>' for p in re.split(r'\n\s*\n', text) if p.strip())
+    if kind == 'signal-flow':
+        steps = ''.join(
+            f'<li><strong>{escape(step["title"])}</strong><span>{escape(step["text"])}</span></li>'
+            for step in block['steps']
+        )
+        return f'<ol class="signal-flow">{steps}</ol>'
     src = escape(block.get('src', ''), quote=True)
     title = escape(block.get('title') or page_title, quote=True)
     if kind == 'image':
