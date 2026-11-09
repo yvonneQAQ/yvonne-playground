@@ -60,6 +60,11 @@
           "text": "I built this Glitch Voice prototype to explore how changes in vocal expression could control live effects alongside loudness. A pretrained audEERING wav2vec 2.0 model estimates arousal, valence, and dominance from the microphone. I use those estimates as continuous controls for processing the same voice in Max/MSP."
         },
         {
+          "type": "download",
+          "text": "View project source on GitHub",
+          "src": "https://github.com/yvonneQAQ/vad-emotion"
+        },
+        {
           "type": "heading",
           "text": "Signal flow"
         },

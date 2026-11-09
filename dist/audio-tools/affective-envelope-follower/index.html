@@ -42,6 +42,7 @@
         <article class="work-article">
           <h1>Affective Envelope Follower</h1>
           <p>I built this Glitch Voice prototype to explore how changes in vocal expression could control live effects alongside loudness. A pretrained audEERING wav2vec 2.0 model estimates arousal, valence, and dominance from the microphone. I use those estimates as continuous controls for processing the same voice in Max/MSP.</p>
+<p class="work-download"><a href="https://github.com/yvonneQAQ/vad-emotion">View project source on GitHub <span aria-hidden="true">↗</span></a></p>
 <h2>Signal flow</h2>
 <ol class="signal-flow"><li><strong>Microphone</strong><span>Capture mono audio at 16 kHz.</span></li><li><strong>Python + wav2vec 2.0</strong><span>Estimate arousal, valence, and dominance on rolling 1-second windows with a 250 ms hop.</span></li><li><strong>OSC</strong><span>Send the latest smoothed values from a dedicated thread at a configurable rate, 30 Hz by default.</span></li><li><strong>Max/MSP</strong><span>Map the estimates to effect parameters and triggers in the live vocal patch.</span></li></ol>
 <h2>Live affect monitor</h2>
