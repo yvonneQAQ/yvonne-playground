@@ -39,8 +39,8 @@
       {
         "title": "SPEKANA",
         "description": "Real-time audio analysis and audio-to-MIDI plugin. C++ / JUCE / VST3.",
-        "link": "https://github.com/yvonneQAQ/spekana-audio-plugin",
-        "link_label": "View on GitHub"
+        "link": "/audio-tools/spekana/",
+        "link_label": "Read the case study"
       },
       {
         "title": "Field Poetry",

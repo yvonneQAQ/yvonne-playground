@@ -1,6 +1,91 @@
 {
   "pages": [
     {
+      "slug": "audio-tools/spekana",
+      "category": "audio-tools",
+      "title": "SPEKANA",
+      "description": "A C++/JUCE plugin that turns live spectral peaks into notation and MIDI.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I built SPEKANA to turn the pitches I hear in complex textures into material I can compose with. The plugin analyzes live audio from a DAW, displays the spectrum and its most prominent peaks, and lets me capture those peaks as a chord."
+        },
+        {
+          "type": "image",
+          "src": "/assets/audio-tools/spekana-ui.png",
+          "alt": "SPEKANA showing a spectrogram, a list of detected peaks, and six captured chords on a grand staff.",
+          "width": 1714,
+          "height": 930
+        },
+        {
+          "type": "heading",
+          "text": "From audio to notation"
+        },
+        {
+          "type": "paragraph",
+          "text": "I implemented the analysis in C++ and JUCE using a 2,048-sample Hann window and a 512-sample hop. The detector ranks local peaks by how far they rise above the estimated spectral envelope. The optional Bass Boost mode uses a zero-padded analysis and looks for harmonic support to help surface low fundamentals."
+        },
+        {
+          "type": "paragraph",
+          "text": "The spectrogram keeps moving while Freeze captures individual chords. The plugin displays the captures on a grand staff and can send them as live MIDI or export them as a MIDI file. In quarter-tone mode, pitch bends on separate MIDI channels let compatible instruments play notes a quarter tone apart."
+        },
+        {
+          "type": "heading",
+          "text": "How I tested it"
+        },
+        {
+          "type": "paragraph",
+          "text": "I used DAW-generated sine tones with known frequencies to check the reported pitches, then tested closely spaced tones to see how the detector separated adjacent peaks. I also used white noise to check what it reported on broadband input. On dense recordings, the peaks are useful as material for composition, and some can be partials or noise rather than played notes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Accepted for online poster presentation at Audio Developer Conference (ADC Bristol 2026)."
+        },
+        {
+          "type": "download",
+          "text": "View SPEKANA source and build instructions on GitHub",
+          "src": "https://github.com/yvonneQAQ/spekana-audio-plugin"
+        }
+      ]
+    },
+    {
+      "slug": "audio-tools/glitch-voice",
+      "category": "audio-tools",
+      "title": "Glitch Voice",
+      "description": "A real-time neural vocal effect built with RAVE, Max/MSP, and a pressure-sensitive performance controller.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I built Glitch Voice to bring the breath, friction, and irregular rhythms of a voice forward during live performance. The system transforms microphone input in real time, and a pressure-sensitive controller lets the performer shape the resulting vocal texture by changing their grip."
+        },
+        {
+          "type": "heading",
+          "text": "Training on two kinds of vocal gesture"
+        },
+        {
+          "type": "paragraph",
+          "text": "I organized my experimental vocal recordings into Flow, for sustained sounds, and Burst, for short, abrupt gestures. I trained models using IRCAM’s RAVE architecture and compared checkpoints by listening to the textures they produced."
+        },
+        {
+          "type": "heading",
+          "text": "Making the models playable"
+        },
+        {
+          "type": "paragraph",
+          "text": "I integrated the neural processing into Max/MSP and mapped grip pressure to a transition between Flow and Burst. The performer can change the balance as they speak or vocalize, using the same gesture to move gradually between sustained and more abrupt textures."
+        },
+        {
+          "type": "paragraph",
+          "text": "Presented at Co-Creativity in Music, Sound, and AI at UC Riverside in June 2026."
+        },
+        {
+          "type": "download",
+          "text": "Read the UC Riverside conference abstract",
+          "src": "https://audiovisualmusic.ucr.edu/co-creativity-book-of-abstracts/"
+        }
+      ]
+    },
+    {
       "slug": "sinkingsuns",
       "title": "We are too tired, like two sinking suns.",
       "source_url": "https://www.yvonneyuanmusic.com/sinkingsuns",

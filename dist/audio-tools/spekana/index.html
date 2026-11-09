@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A C++/JUCE plugin that turns live spectral peaks into notation and MIDI.">
+  <link rel="canonical" href="https://yvonneyuansplayground.com/audio-tools/spekana/">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="SPEKANA | Yifeng Yvonne Yuan">
+  <title>SPEKANA | Yifeng Yvonne Yuan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="work-page audio-tool-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Yifeng Yvonne Yuan's Playground home"><span>YIFENG YVONNE YUAN&#x27;S</span><span>PLAYGROUND</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar"><nav id="site-nav" aria-label="Main navigation">
+  <ul class="main-nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/audio-tools/">Audio Tools</a></li>
+    <li>
+      <a href="/listofworks/">Works</a>
+      <ul class="work-nav">
+        <li><a href="/listofworks/#contemporary-music">Contemporary Music</a></li>
+        <li><a href="/listofworks/#multimedia">Multimedia</a></li>
+        <li><a href="/listofworks/#film-and-dance">Dance and Film</a></li>
+        <li><a href="/mypoetry/">Poetry</a></li>
+      </ul>
+    </li>
+    <li class="nav-events"><a href="/#events">Event</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</aside>
+      <main class="work-content" id="main">
+        <a class="back-to-works" href="/audio-tools/">← Audio Tools</a>
+        <article class="work-article">
+          <h1>SPEKANA</h1>
+          <p>I built SPEKANA to turn the pitches I hear in complex textures into material I can compose with. The plugin analyzes live audio from a DAW, displays the spectrum and its most prominent peaks, and lets me capture those peaks as a chord.</p>
+<figure class="work-image"><a href="/assets/audio-tools/spekana-ui.png" target="_blank" rel="noopener" aria-label="Open image: SPEKANA showing a spectrogram, a list of detected peaks, and six captured chords on a grand staff."><img src="/assets/audio-tools/spekana-ui.png" alt="SPEKANA showing a spectrogram, a list of detected peaks, and six captured chords on a grand staff." loading="lazy" width="1714" height="930"></a></figure>
+<h2>From audio to notation</h2>
+<p>I implemented the analysis in C++ and JUCE using a 2,048-sample Hann window and a 512-sample hop. The detector ranks local peaks by how far they rise above the estimated spectral envelope. The optional Bass Boost mode uses a zero-padded analysis and looks for harmonic support to help surface low fundamentals.</p>
+<p>The spectrogram keeps moving while Freeze captures individual chords. The plugin displays the captures on a grand staff and can send them as live MIDI or export them as a MIDI file. In quarter-tone mode, pitch bends on separate MIDI channels let compatible instruments play notes a quarter tone apart.</p>
+<h2>How I tested it</h2>
+<p>I used DAW-generated sine tones with known frequencies to check the reported pitches, then tested closely spaced tones to see how the detector separated adjacent peaks. I also used white noise to check what it reported on broadband input. On dense recordings, the peaks are useful as material for composition, and some can be partials or noise rather than played notes.</p>
+<p>Accepted for online poster presentation at Audio Developer Conference (ADC Bristol 2026).</p>
+<p class="work-download"><a href="https://github.com/yvonneQAQ/spekana-audio-plugin">View SPEKANA source and build instructions on GitHub <span aria-hidden="true">↗</span></a></p>
+        </article>
+        <footer id="contact">
+  <p>Email <a href="mailto:yifengyuan@ucsb.edu">yifengyuan@ucsb.edu</a> for scores and collaboration</p>
+  <div class="social-links" aria-label="Listen and follow">
+    <a href="https://yvonneyuan.bandcamp.com/">Bandcamp</a>
+    <a href="https://soundcloud.com/yifeng-yvonne-yuan">SoundCloud</a>
+    <a href="https://www.instagram.com/yifeng.yvonne.yuan/">Instagram</a>
+  </div>
+  <p class="copyright">@yvonneyuanmusic2025</p>
+</footer>
+
+      </main>
+    </div>
+  </div>
+  <script src="/site.js" defer></script>
+</body>
+</html>

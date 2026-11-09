@@ -51,6 +51,7 @@ def render_page(page, template_name, output, extra=None):
         'site_url': SITE_URL,
         'home_current': ' aria-current="page"' if page == 'home' else '',
         'about_current': ' aria-current="page"' if page == 'about' else '',
+        'audio_tools_current': ' aria-current="page"' if page == 'audio-tools' else '',
         'works_current': ' aria-current="page"' if page == 'works' else '',
         'poetry_current': ' aria-current="page"' if page == 'poetry' else '',
         'events_url': '#events' if page == 'home' else '/#events',
@@ -123,6 +124,7 @@ def render_block(block, page_title):
 
 render_page('home', 'homepage.template.html', 'index.html')
 render_page('about', 'about.template.html', 'about/index.html')
+render_page('audio-tools', 'audio-tools.template.html', 'audio-tools/index.html')
 
 works = json.loads((ROOT / 'works.json').read_text())
 sections = []
@@ -149,16 +151,19 @@ if pages_file.exists():
     pages = json.loads(pages_file.read_text())
     for page in pages['pages']:
         is_poetry = page['slug'] == 'mypoetry'
+        is_audio_tool = page.get('category') == 'audio-tools'
         category = category_by_path.get('/' + page['slug'] + '/')
         back_url = '/listofworks/#' + category['id'] if category else ('/' if is_poetry else '/mypoetry/' if page.get('category') == 'poetry' else '/listofworks/')
         back_label = category['title'] if category else ('Home' if is_poetry else 'Poetry' if page.get('category') == 'poetry' else 'Works')
+        if is_audio_tool:
+            back_url, back_label = '/audio-tools/', 'Audio Tools'
         blocks = page['blocks']
         heading = page.get('heading') or page['title']
         render_page('poetry' if is_poetry else 'work', 'poetry.template.html' if is_poetry else 'work.template.html', page['slug'] + '/index.html', {
             'page_title': escape(page['title'], quote=True),
             'page_heading': escape(heading),
             'page_description': escape(page.get('description') or page['title'] + ' — a work by Yifeng Yvonne Yuan.', quote=True),
-            'page_class': 'poetry-page' if is_poetry else '',
+            'page_class': 'audio-tool-page' if is_audio_tool else '',
             'back_url': back_url,
             'back_label': escape(back_label),
             'page_blocks_html': '\n'.join(render_block(b, page['title']) for b in blocks),

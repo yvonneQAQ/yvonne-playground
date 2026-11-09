@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audio engineering projects by Yifeng Yvonne Yuan in real-time DSP, neural audio, and sensor-driven instruments.">
+  <link rel="canonical" href="${canonical_url}">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Audio Tools | Yifeng Yvonne Yuan">
+  <meta property="og:image" content="${site_url}/assets/audio-tools/spekana-ui.png">
+  <title>Audio Tools | Yifeng Yvonne Yuan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="${name}'s Playground home"><span>${title}</span><span>${subtitle}</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">+</span></button>
+    </header>
+    <div class="page-layout">
+      <aside class="sidebar">${navigation_html}</aside>
+      <main class="audio-tools-content" id="main">
+        <header class="tools-intro">
+          <p class="page-eyebrow">Selected engineering projects</p>
+          <h1>Audio Tools</h1>
+          <p>I build real-time audio software and instruments for composition and live performance.</p>
+        </header>
+        <article class="tools-feature" aria-labelledby="spekana-title">
+          <p class="tools-meta">C++ / JUCE / Real-time DSP</p>
+          <h2 id="spekana-title">SPEKANA</h2>
+          <p>A plugin that shows the spectrum of live audio and lets composers capture prominent frequencies as notes, review them on a staff, and export them as MIDI.</p>
+          <div class="tools-links">
+            <a href="/audio-tools/spekana/">Read the SPEKANA case study <span aria-hidden="true">→</span></a>
+            <a href="https://github.com/yvonneQAQ/spekana-audio-plugin">Source on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="tools-figure">
+            <img src="/assets/audio-tools/spekana-ui.png" width="1714" height="930" alt="SPEKANA plugin interface showing a live spectrogram, ten detected peaks, and captured notes on a grand staff.">
+            <figcaption>The SPEKANA interface with captured chords below the spectrogram.</figcaption>
+          </figure>
+        </article>
+        <section class="tools-projects" aria-label="More audio projects">
+          <article class="tools-project">
+            <p class="tools-meta">RAVE / Max/MSP / Neural audio</p>
+            <h2>Glitch Voice</h2>
+            <p>A live voice effect that uses models trained on sustained and burst-like vocal sounds. A pressure-sensitive controller lets the performer move between the two textures by changing their grip.</p>
+            <div class="tools-links"><a href="/audio-tools/glitch-voice/">Read the Glitch Voice case study <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="tools-project">
+            <p class="tools-meta">Arduino / Max/MSP / Sensors</p>
+            <h2>Field Poetry</h2>
+            <p>A custom sound box that maps light, temperature, and humidity to filtering, event density, and delay. I built the Arduino circuit and programmed the Max patch.</p>
+            <div class="tools-links"><a href="/fieldpoetry/">Watch the Field Poetry demo <span aria-hidden="true">→</span></a></div>
+          </article>
+        </section>
+        <div class="tools-links tools-profile">
+          <a href="${about_url}">About my engineering practice <span aria-hidden="true">→</span></a>
+          <a href="${resume_url}">Résumé <span aria-hidden="true">↗</span></a>
+        </div>
+        ${footer_html}
+      </main>
+    </div>
+  </div>
+  <script src="/site.js" defer></script>
+</body>
+</html>
