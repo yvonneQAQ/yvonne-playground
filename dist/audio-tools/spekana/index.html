@@ -42,6 +42,10 @@
         <article class="work-article">
           <h1>SPEKANA</h1>
           <p>I built SPEKANA to turn the pitches I hear in complex textures into material I can compose with. The plugin analyzes live audio from a DAW, displays the spectrum and its most prominent peaks, and lets me capture those peaks as a chord.</p>
+<h2>ADC 2026 interactive poster</h2>
+<p>Explore the signal flow, evaluation results and frog and bird listening examples, from original field recordings to transcription and musical interpretation.</p>
+<p class="work-download"><a href="https://spekana.yvonneyuanmusic.com/">Explore the interactive poster <span aria-hidden="true">↗</span></a></p>
+<p class="work-download"><a href="https://spekana.yvonneyuanmusic.com/#demo">Jump to listening examples <span aria-hidden="true">↗</span></a></p>
 <figure class="work-image"><a href="/assets/audio-tools/spekana-ui.png" target="_blank" rel="noopener" aria-label="Open image: SPEKANA’s spectrogram and six analysis charts, with capture controls and a spectral peak list on the right."><img src="/assets/audio-tools/spekana-ui.png" alt="SPEKANA’s spectrogram and six analysis charts, with capture controls and a spectral peak list on the right." loading="lazy" width="1920" height="1292"></a></figure>
 <h2>From audio to notation</h2>
 <p>I implemented the analysis in C++ and JUCE using a 2,048-sample Hann window and a 512-sample hop. The detector ranks local peaks by how far they rise above the estimated spectral envelope. The optional Bass Boost mode uses a zero-padded analysis and looks for harmonic support to help surface low fundamentals.</p>

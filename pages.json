@@ -11,6 +11,24 @@
           "text": "I built SPEKANA to turn the pitches I hear in complex textures into material I can compose with. The plugin analyzes live audio from a DAW, displays the spectrum and its most prominent peaks, and lets me capture those peaks as a chord."
         },
         {
+          "type": "heading",
+          "text": "ADC 2026 interactive poster"
+        },
+        {
+          "type": "paragraph",
+          "text": "Explore the signal flow, evaluation results and frog and bird listening examples, from original field recordings to transcription and musical interpretation."
+        },
+        {
+          "type": "download",
+          "text": "Explore the interactive poster",
+          "src": "https://spekana.yvonneyuanmusic.com/"
+        },
+        {
+          "type": "download",
+          "text": "Jump to listening examples",
+          "src": "https://spekana.yvonneyuanmusic.com/#demo"
+        },
+        {
           "type": "image",
           "src": "/assets/audio-tools/spekana-ui.png",
           "alt": "SPEKANA’s spectrogram and six analysis charts, with capture controls and a spectral peak list on the right.",
