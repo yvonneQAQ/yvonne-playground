@@ -57,6 +57,8 @@ Run `python3 build.py` after changing the content or template. The output is a s
 
 ## Current migration boundary
 
+The `/selected-works/` portal presents four works for composition and media review: Project Zi, the official Gu Shi trailer, Ephemeral Bloom, and I wrote you a letter. Content and recording links are maintained in `portfolio.json`; `portfolio.template.html` supplies the layout. Project Zi uses the owner's supplied 2024 campaign video, served locally as a 720p H.264 MP4 with its original AAC audio stream copied without re-encoding. The supplied picture includes its existing reference label and timecode. The other recordings remain embedded from YouTube and Bandcamp, with separate links to each recording and the existing score excerpts where available.
+
 The homepage, About page, Events, Contact, Works catalogue, all authored published work/poetry pages found in the Wix sitemap, and responsive navigation are implemented. Audio Tools opens the engineering portfolio, with case studies for SPEKANA, the Affective Envelope Follower, and the Glitch Voice RAVE prototype, plus a link to the Field Poetry demo. The category links jump to the corresponding section of Works.
 
 Existing authored URL paths are retained, including older Field Poetry and Typist variants, the film reel, text scores, and the family recording. The unused `/poetry` template and its three placeholder detail pages redirect to `/mypoetry/`; `/blank-2`, `/blank-3`, and `/s-projects-basic` redirect to Works. Original public source snapshots and original-size assets are backed up outside the deployed project in `../../tmp/wix-migration-2026-11-04/`.

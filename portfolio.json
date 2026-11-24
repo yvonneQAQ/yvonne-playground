@@ -1,0 +1,70 @@
+{
+  "introduction": "Original music for advertising, film, orchestra, and multimedia performance.",
+  "works": [
+    {
+      "id": "project-zi",
+      "short_title": "Project Zi",
+      "title": "Project Zi",
+      "category": "Advertising · 2024 · 2:05",
+      "role": "Original music",
+      "description": "Original music for a campaign film for Hongzi Gabrielle Jiang.",
+      "media": {
+        "type": "video",
+        "src": "/assets/works/project-zi-2024-web.mp4",
+        "poster": "/assets/works/project-zi-2024-poster.jpg"
+      },
+      "links": [
+        {"label": "Open video separately", "url": "/assets/works/project-zi-2024-web.mp4"}
+      ]
+    },
+    {
+      "id": "gu-shi",
+      "short_title": "Gu Shi",
+      "title": "Gu Shi",
+      "category": "Film · 2026 · Official trailer · 1:57",
+      "role": "Original film score",
+      "description": "Official trailer for Amie Song’s feature film, published by La Biennale di Venezia. The film was selected for the 2026 Venice International Film Festival and Busan International Film Festival.",
+      "media": {
+        "type": "video-embed",
+        "src": "https://www.youtube.com/embed/gcOuDSfFAsY?rel=0"
+      },
+      "links": [
+        {"label": "Watch on YouTube", "url": "https://www.youtube.com/watch?v=gcOuDSfFAsY"},
+        {"label": "Venice programme", "url": "https://www.labiennale.org/en/cinema/2026/biennale-college-cinema/gu-shi"}
+      ]
+    },
+    {
+      "id": "ephemeral-bloom",
+      "short_title": "Ephemeral Bloom",
+      "title": "Ephemeral Bloom",
+      "category": "Symphony orchestra · 8:00",
+      "role": "Composition and orchestration",
+      "description": "Inspired by Wang Wei’s poem Xin Yi Wu (The Magnolia Dale), the work explores the fleeting life of magnolia blossoms through orchestral colour. Premiered by the Seattle Festival Orchestra in 2024.",
+      "media": {
+        "type": "audio-embed",
+        "src": "https://bandcamp.com/EmbeddedPlayer/track=2817838327/size=large/bgcol=ffffff/linkcol=77459b/tracklist=false/artwork=small/transparent=true/"
+      },
+      "links": [
+        {"label": "Listen on Bandcamp", "url": "https://yvonneyuan.bandcamp.com/track/ephemeral-bloom-for-symphonic-orchestra"},
+        {"label": "Programme note and score excerpts", "url": "/ephemeral-bloom/"}
+      ]
+    },
+    {
+      "id": "letter",
+      "short_title": "I wrote you a letter",
+      "title": "I wrote you a letter.",
+      "subtitle": "(a letter is what I wrote to you.)",
+      "category": "Multimedia performance · 2025",
+      "role": "Composition",
+      "description": "A work for two pianos, typewriter, and multimedia, commissioned by House on Fire. Instrumental writing meets the physical sound and action of typing in a live performance setting.",
+      "media": {
+        "type": "video-embed",
+        "src": "https://www.youtube.com/embed/APUgi03JEpY?rel=0"
+      },
+      "links": [
+        {"label": "Watch on YouTube", "url": "https://www.youtube.com/watch?v=APUgi03JEpY"},
+        {"label": "Work page", "url": "/i-wrote-you-a-letter/"}
+      ]
+    }
+  ]
+}

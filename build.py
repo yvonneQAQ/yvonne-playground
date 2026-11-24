@@ -52,6 +52,7 @@ def render_page(page, template_name, output, extra=None):
         'home_current': ' aria-current="page"' if page == 'home' else '',
         'about_current': ' aria-current="page"' if page == 'about' else '',
         'audio_tools_current': ' aria-current="page"' if page == 'audio-tools' else '',
+        'portfolio_current': ' aria-current="page"' if page == 'portfolio' else '',
         'works_current': ' aria-current="page"' if page == 'works' else '',
         'poetry_current': ' aria-current="page"' if page == 'poetry' else '',
         'events_url': '#events' if page == 'home' else '/#events',
@@ -133,6 +134,47 @@ def render_block(block, page_title):
 render_page('home', 'homepage.template.html', 'index.html')
 render_page('about', 'about.template.html', 'about/index.html')
 render_page('audio-tools', 'audio-tools.template.html', 'audio-tools/index.html')
+
+portfolio = json.loads((ROOT / 'portfolio.json').read_text())
+portfolio_sections = []
+portfolio_jumps = []
+for work in portfolio['works']:
+    work_id = escape(work['id'], quote=True)
+    portfolio_jumps.append('<a href="#' + work_id + '">' + escape(work['short_title']) + '</a>')
+    media = work['media']
+    if media['type'] == 'video':
+        player = (
+            '<video controls playsinline preload="metadata" poster="' + escape(media['poster'], quote=True)
+            + '" aria-label="' + escape(work['title'], quote=True) + '">'
+            '<source src="' + escape(media['src'], quote=True) + '" type="video/mp4">'
+            'Your browser does not support embedded video.</video>'
+        )
+    else:
+        player = (
+            '<iframe src="' + escape(media['src'], quote=True) + '" title="' + escape(work['title'] + ' recording', quote=True)
+            + '" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; encrypted-media" '
+            'allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>'
+        )
+    media_class = 'portfolio-audio' if media['type'] == 'audio-embed' else 'portfolio-video'
+    extra_links = ''.join(
+        '<a href="' + escape(link['url'], quote=True) + '">' + escape(link['label']) + '</a>'
+        for link in work.get('links', [])
+    )
+    subtitle = '<p class="portfolio-subtitle">' + escape(work['subtitle']) + '</p>' if work.get('subtitle') else ''
+    portfolio_sections.append(
+        '<section class="portfolio-work" id="' + work_id + '" aria-labelledby="' + work_id + '-title">'
+        '<p class="portfolio-kind">' + escape(work['category']) + '</p>'
+        '<h2 id="' + work_id + '-title">' + escape(work['title']) + '</h2>' + subtitle
+        + '<p class="portfolio-credit"><strong>My role</strong> ' + escape(work['role']) + '</p>'
+        '<p class="portfolio-description">' + escape(work['description']) + '</p>'
+        '<div class="portfolio-player ' + media_class + '">' + player + '</div>'
+        '<div class="portfolio-recording-links">' + extra_links + '</div></section>'
+    )
+render_page('portfolio', 'portfolio.template.html', 'selected-works/index.html', {
+    'portfolio_intro': escape(portfolio['introduction']),
+    'portfolio_jump_links': ''.join(portfolio_jumps),
+    'portfolio_sections': '\n'.join(portfolio_sections),
+})
 
 works = json.loads((ROOT / 'works.json').read_text())
 sections = []
