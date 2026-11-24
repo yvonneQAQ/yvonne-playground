@@ -5,16 +5,16 @@
       "id": "project-zi",
       "short_title": "Project Zi",
       "title": "Project Zi",
-      "category": "Advertising · 2024 · 2:05",
+      "category": "Advertising · 2024 · 2:04",
       "role": "Original music",
       "description": "Original music for a campaign film for Hongzi Gabrielle Jiang.",
       "media": {
         "type": "video",
-        "src": "/assets/works/project-zi-2024-web.mp4",
-        "poster": "/assets/works/project-zi-2024-poster.jpg"
+        "src": "/assets/works/project-zi-2024-v2.mp4",
+        "poster": "/assets/works/project-zi-2024-v2-poster.jpg"
       },
       "links": [
-        {"label": "Open video separately", "url": "/assets/works/project-zi-2024-web.mp4"}
+        {"label": "Open video separately", "url": "/assets/works/project-zi-2024-v2.mp4"}
       ]
     },
     {

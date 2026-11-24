@@ -51,6 +51,7 @@ The deployment workflow uses GitHub's built-in token and requires no personal to
 - `dist/assets/`: locally stored photos, score images, score PDF, resume, audio recording, and compressed film reel. Third-party YouTube, Vimeo, and Bandcamp players remain on those services.
 - `.github/workflows/deploy-pages.yml`: automatic build, link checks, and GitHub Pages deployment.
 - `scripts/verify_site.py`: checks generated pages, local files, internal anchors, and production metadata before deployment.
+- `portfolio.json` and `portfolio.template.html`: the Selected Works portal. Project Zi uses the replacement `zi.mov` supplied on November 24, 2026, exported as `project-zi-2024-v2.mp4` (960 × 540, 2:04) with its original AAC audio and a new poster. The previous video and poster were replaced.
 - `.openai/hosting.json`: retained identity for the previous Sites host; GitHub Pages does not use it and it contains no deployment credentials.
 
 Run `python3 build.py` after changing the content or template. The output is a standalone static site in `dist/`; it needs no database, framework, package install, or server-side code. Edit templates and JSON rather than the generated HTML. Styles, JavaScript, and media remain tracked in `dist/`. The build also generates `robots.txt`, `sitemap.xml`, and production canonical URLs.
